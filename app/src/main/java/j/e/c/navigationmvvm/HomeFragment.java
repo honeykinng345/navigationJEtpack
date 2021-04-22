@@ -24,21 +24,26 @@ Button btn1,btn2,btn3;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_home,container,false);
-      btn1 = view.findViewById(R.id.btnsend);
-      btn1.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View v) {
-NavController navController = Navigation.findNavController(view);
-    navController.navigate(R.id.action_homeFragment_to_chooseReciverFragment);
-          }
-      });
+
 
         return view;
 
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        btn1 = view.findViewById(R.id.btnsend);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavDirections action = HomeFragmentDirections.actionHomeFragmentToChooseReciverFragment();
+
+                Navigation.findNavController(view).navigate(action);
+
+
+            }
+        });
     }
 }
