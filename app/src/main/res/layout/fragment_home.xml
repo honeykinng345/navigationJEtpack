@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"
+        android:text="Welcome " />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:text="Send Money"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnsend"
+
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:text="View Balance"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/viewBalance"
+android:layout_below="@+id/btnsend"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:text="View Tansections"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/viewTransction"
+        android:layout_below="@+id/viewBalance"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content">
+
+    </Button>
+</RelativeLayout>

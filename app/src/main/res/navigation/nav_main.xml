@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+
+    tools:ignore="UnusedNavigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="j.e.c.navigationmvvm.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_chooseReciverFragment"
+            app:destination="@id/chooseReciverFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_viewBalanceFragment"
+            app:destination="@id/viewBalanceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_viewTransectionFragment"
+            app:destination="@id/viewTransectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseReciverFragment"
+        android:name="j.e.c.navigationmvvm.ChooseReciverFragment"
+        android:label="fragment_choose_reciver"
+        tools:layout="@layout/fragment_choose_reciver" />
+    <fragment
+        android:id="@+id/viewBalanceFragment"
+        android:name="j.e.c.navigationmvvm.ViewBalanceFragment"
+        android:label="view_balance_fragment"
+        tools:layout="@layout/view_balance_fragment" />
+    <fragment
+        android:id="@+id/viewTransectionFragment"
+        android:name="j.e.c.navigationmvvm.ViewTransectionFragment"
+        android:label="fragment_view_transections"
+        tools:layout="@layout/fragment_view_transections" />
+</navigation>
