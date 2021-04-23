@@ -26,7 +26,11 @@
         android:id="@+id/chooseReciverFragment"
         android:name="j.e.c.navigationmvvm.ChooseReciverFragment"
         android:label="fragment_choose_reciver"
-        tools:layout="@layout/fragment_choose_reciver" />
+        tools:layout="@layout/fragment_choose_reciver" >
+        <action
+            android:id="@+id/action_chooseReciverFragment_to_sendreciverFragment"
+            app:destination="@id/sendreciverFragment" />
+    </fragment>
     <fragment
         android:id="@+id/viewBalanceFragment"
         android:name="j.e.c.navigationmvvm.ViewBalanceFragment"
@@ -37,4 +41,13 @@
         android:name="j.e.c.navigationmvvm.ViewTransectionFragment"
         android:label="fragment_view_transections"
         tools:layout="@layout/fragment_view_transections" />
+    <fragment
+        android:id="@+id/sendreciverFragment"
+        android:name="j.e.c.navigationmvvm.sendreciverFragment"
+        android:label="fragment_send_reciver"
+        tools:layout="@layout/fragment_send_reciver" >
+        <argument
+            android:name="receviername"
+            app:argType="string" />
+    </fragment>
 </navigation>
